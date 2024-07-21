@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cab: one
+  customer_request: one
+  start_latitude: 1.5
+  start_longitude: 1.5
+  end_latitude: 1.5
+  end_longitude: 1.5
+  fare: 1.5
+
+two:
+  cab: two
+  customer_request: two
+  start_latitude: 1.5
+  start_longitude: 1.5
+  end_latitude: 1.5
+  end_longitude: 1.5
+  fare: 1.5

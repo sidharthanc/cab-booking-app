@@ -1,0 +1,25 @@
+<h1>Ride Details</h1>
+
+<dl>
+  <dt>Status:</dt>
+  <dd><%= @ride.customer_request.status.capitalize %></dd>
+
+  <dt>Start Location:</dt>
+  <dd>Latitude: <%= @ride.start_latitude %>, Longitude: <%= @ride.start_longitude %></dd>
+
+  <dt>End Location:</dt>
+  <dd>Latitude: <%= @ride.end_latitude %>, Longitude: <%= @ride.end_longitude %></dd>
+
+  <dt>Fare:</dt>
+  <dd>INR <%= number_to_currency(@ride.fare, unit: '') %></dd>
+</dl>
+
+<% if @ride.customer_request.status == 'accepted'%>
+  <%= button_to 'End Ride', update_ride_ride_path(@ride), method: :patch, data: { confirm: 'Are you sure?' } %>
+
+<% end %>
+
+<% if @ride.customer_request.status == 'completed'%>
+ <%= link_to 'New Ride', new_customer_request_path, method: :get %>
+<% end %>
+

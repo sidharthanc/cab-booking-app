@@ -1,0 +1,37 @@
+<h1>Request a Cab</h1>
+
+
+<%= form_with(model: @customer_request, url: customer_requests_path, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :start_latitude %>
+    <%= form.text_field :start_latitude, id: 'start_latitude', readonly: false %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_longitude %>
+    <%= form.text_field :start_longitude, id: 'start_longitude', readonly: false %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_latitude %>
+    <%= form.text_field :end_latitude, id: 'end_latitude', readonly: false %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_longitude %>
+    <%= form.text_field :end_longitude, id: 'end_longitude', readonly: false %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Request Cab' %>
+  </div>
+<% end %>
+
+<script>
+  // Initialize Google Maps
+  
+</script>
+
+<!-- Load Google Maps API -->
+
+
